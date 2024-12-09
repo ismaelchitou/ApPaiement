@@ -12,6 +12,16 @@ namespace AppPaiements
 
             Paypal transaction1 = new Paypal(150.00, "frais de scolarte", "akwame@gmail.com");
             Paypal transaction2 = new Paypal(2000, "Achat voiture", "chitouismael@gmail.com");
+
+            Utlisateur utilisateur = new Utlisateur("Ismael Chitou");
+
+
+            utilisateur.AjouterPaiement(achat1);
+            utilisateur.AjouterPaiement(achat2);
+            utilisateur.AjouterPaiement(achat3);
+            utilisateur.AjouterPaiement(transaction1);
+            utilisateur.AjouterPaiement(transaction2);
         }
+
     }
 }

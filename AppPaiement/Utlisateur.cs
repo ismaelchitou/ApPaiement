@@ -14,11 +14,20 @@ namespace AppPaiement
         public Utlisateur(string nom)
         {
             Nom = nom;
+            paiements = new List<Paiement>();
+        }
+        public void AjouterPaiement(Paiement paiement)
+        {
+            paiements.Add(paiement);
         }
         public void AfficherInfos()
         {
-            Console.WriteLine($"Utilisateur: {Nom}");
-            Console.WriteLine("Liste des paiements:");
+            Console.WriteLine($"Votre Nom est: {Nom}");
+            Console.WriteLine("Liste de paiement:");
+            foreach (var paiement in paiements)
+            {
+                paiement.AfficherDetails();
+            }
         }
     }
 }
